@@ -1,13 +1,12 @@
 com\example\lab3\beans\Book.class
 com\example\lab3\responses\UnauthorizeException.class
-com\example\lab3\requests\TitlesRequest.class
 com\example\lab3\beans\Role.class
 com\example\lab3\login\CustomWebSecurityConfigurerAdapter.class
 com\example\lab3\responses\OkResponse.class
+com\example\lab3\spring\DashboardController.class
 com\example\lab3\beans\User.class
 com\example\lab3\login\UserDetailsClass.class
 com\example\lab3\ApplicationStarter.class
-com\example\lab3\helpers\LibraryContextServletListener.class
 com\example\lab3\login\UserDetailsServiceClass.class
 com\example\lab3\spring\DashboardService.class
 com\example\lab3\responses\GetDashboardReponse.class

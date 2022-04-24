@@ -1,14 +1,14 @@
 package com.example.lab3.responses;
 
 public abstract class Response {
-    private String message;
+    private Object message;
     private int status;
 
     public int getStatus() {
         return status;
     }
 
-    public String getMessage() {
+    public Object getMessage() {
         return message;
     }
 
@@ -16,11 +16,11 @@ public abstract class Response {
         this.status=status;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(Object message) {
         this.message=message;
     }
 
-    public Response(int status, String message) {
+    public Response(int status, Object message) {
         this.status = status;
         this.message = message;
     }

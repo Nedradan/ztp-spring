@@ -1,7 +1,6 @@
 package com.example.lab3.spring;
 
 import com.example.lab3.beans.Book;
-import com.example.lab3.requests.TitlesRequest;
 import com.example.lab3.responses.ExceptionResponse;
 import com.example.lab3.responses.GetDashboardReponse;
 import com.example.lab3.responses.OkResponse;
@@ -20,7 +19,7 @@ import java.util.ArrayList;
 
 @Service
 public class DashboardService {
-    ArrayList<Book> books;
+    ArrayList<Book> books=new ArrayList<>();
     private Gson gson;
 
     public DashboardService() {
@@ -53,7 +52,7 @@ public class DashboardService {
             Book book=books.get(id);
             if (book != null) {
                 defaultStatus = HttpStatus.OK;
-                response = new OkResponse(book.toString());
+                response = new OkResponse(book);
             }
         } catch (Exception ex) {
             response = new ExceptionResponse(ex.toString());
@@ -87,7 +86,7 @@ public class DashboardService {
             if (book != null) {
                 books.remove(id);
                 defaultStatus = HttpStatus.OK;
-                response = new OkResponse(book.toString());
+                response = new OkResponse(book);
             } else {
                 defaultStatus = HttpStatus.NOT_FOUND;
             }
